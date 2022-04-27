@@ -1,0 +1,35 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'compliment/compliment_user.css' %}">
+<title>Compliment {{user.username}}</title>
+{% endblock title %}
+
+{% block content %}
+<h1>
+  {{user.username}}
+</h1>
+
+<div class="give_zone">
+  <div class="container">
+    <form action="" method="POST" class="form_area">
+      {% csrf_token %}
+      {{form.description}}
+      <input type="submit" value="Add" name="compliment_add">
+    </form>
+  </div>
+</div>
+
+<div class="show_zone">
+  <div class="container">
+    <div class="show_area">
+      {% for compliment in compliments %}
+      <p>
+        {{compliment.description}} - <sub>{{compliment.giver}}</sub>
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

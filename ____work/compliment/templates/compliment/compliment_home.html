@@ -1,0 +1,33 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'compliment/compliment_home.css' %}">
+<title>Compliment Home</title>
+{% endblock title %}
+
+{% block content %}
+
+<h1>Compliment Home</h1>
+
+<div class="tools_zone">
+  <div class="container">
+    <div class="tools_area">
+      Search, etc.
+    </div>
+  </div>
+</div>
+
+<div class="people_zone">
+  <div class="container">
+    <div class="people_area">
+      {% for user in users %}
+        <a href="{% url 'compliment_user' user.id %}" class="people">
+          {{user.username}}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
