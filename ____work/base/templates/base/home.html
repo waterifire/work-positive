@@ -1,0 +1,30 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'base/home.css' %}">
+<title>Home</title>
+{% endblock title %}
+
+
+{% block content %}
+<h1>Home Page</h1>
+
+<div class="topic_zone">
+  <div class="container">
+    <div class="topic_area">
+      <a href="">Bio</a>
+      <a href="">Personality Test</a>
+      <a href="">Quiz</a>
+      <a href="">Do you Know them?</a>
+      <a href="">Salvation</a>
+      <a href="">Compliment</a>
+      <a href="">Talk to me about</a>
+      <a href="">Hobbies</a>
+      <a href="">Workle</a>
+      <a href="">Best thing in my home</a>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+}
+
+.topic_area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.topic_area a:link,
+.topic_area a:visited {
+  flex-basis: 50%;
+  min-height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
