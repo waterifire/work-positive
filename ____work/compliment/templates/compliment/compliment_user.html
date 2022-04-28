@@ -25,11 +25,15 @@
   <div class="container">
     <div class="show_area">
       {% for compliment in compliments %}
-      <p>
-        {{compliment.description}} - <sub>{{compliment.giver}}</sub>
-      </p>
+        {% if compliment.receiver == user.username %}
+          <p>
+            {{compliment.description}} - <sub>{{compliment.giver}}</sub>
+          </p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
 </div>
+
+
 {% endblock content %}
