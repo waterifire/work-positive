@@ -13,7 +13,12 @@
 <div class="tools_zone">
   <div class="container">
     <div class="tools_area">
-      Search, etc.
+      <a href="{% url 'compliment_home' %}?q=''">All</a>
+      <form action="" method="get"> <!-- //TODO: fix the url that is showing -->
+        {% csrf_token %}
+        <input type="text" name="q" placeholder="Search...">
+        <!-- <input type="submit" name="search_btn" value="Search"> -->
+      </form>
     </div>
   </div>
 </div>
@@ -22,12 +27,15 @@
   <div class="container">
     <div class="people_area">
       {% for user in users %}
+        {% if user.username != 'super' %}
         <a href="{% url 'compliment_user' user.id %}" class="people">
           {{user.username}}
         </a>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
 </div>
+
 
 {% endblock content %}
