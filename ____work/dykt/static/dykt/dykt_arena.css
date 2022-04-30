@@ -1,0 +1,73 @@
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+h1 {
+  text-align: center;
+}
+#question_zone {
+  --hue: var(--hue-neutral);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(var(--hue), 100%, 20%);
+  min-height: 80vh;
+  width: 100vw;
+}
+
+#question_zone.correct {
+  --hue: var(--hue-correct);
+}
+
+#question_zone.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 3px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 0.2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  color: #000;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide_me {
+  display: none;
+}

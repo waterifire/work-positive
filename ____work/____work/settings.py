@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'compliment',
     'hobby',
     'test_setup',
+    'dykt',
 ]
 
 MIDDLEWARE = [

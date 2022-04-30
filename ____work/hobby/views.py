@@ -86,12 +86,12 @@ def hobby_area(request, pk):
             h_form = HobbyForm({'hobby_user': instance_made.hobby_user.add(request.user.id), 'hobby_name': pk, 'updated': timezone.now()}, instance=instance_made)
             if h_form.is_valid():
                 h_form.save()
-                return redirect(request.path_info)
+                return redirect('hobby_home')  # //TODO: make sure this redirect works
         elif 'hobby_leave' in request.POST:
             h_form = HobbyForm({'hobby_user': instance_made.hobby_user.remove(request.user.id), 'hobby_name': pk, 'updated': timezone.now()}, instance=instance_made)
             if h_form.is_valid():
                 h_form.save()
-                return redirect(request.path_info)
+                return redirect('hobby_home')
     context = {'instance_made': instance_made,'hobby': hobby, 'hobby_details': hobby_details,}
     response = render(request, 'hobby/hobby_area.html', context)
     return response
