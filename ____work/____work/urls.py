@@ -22,4 +22,5 @@ urlpatterns = [
     path('compliment/', include('compliment.urls')),
     path('hobby/', include('hobby.urls')),
     path('test_setup/', include('test_setup.urls')),
+    path('dykt/', include('dykt.urls')),
 ]

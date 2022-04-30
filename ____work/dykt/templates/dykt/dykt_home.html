@@ -1,0 +1,19 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'dykt/dykt_home.css' %}">
+<title>Do You Know Them</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Do you know them?</h1>
+
+{% for person in people %}
+<a href="{% url 'dykt_arena' person.id %}">
+  {{person}}
+</a>
+<br>
+{% endfor %}
+
+{% endblock content %}

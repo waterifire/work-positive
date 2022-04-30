@@ -1,0 +1,54 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'dykt/dykt_arena.css' %}">
+<script src="{% static 'dykt/dykt_arena.js' %}" defer charset="utf-8"></script>
+<title>QUIZ TIME</title>
+{% endblock title %}
+
+{% block content %}
+
+<h1>QUIZ TIME: {{person|title}}</h1>
+
+<div id="question_zone">
+  <div class="container">
+    <div id="question_area" class="hide_me">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid">
+        <div class="btn">1</div>
+        <div class="btn">2</div>
+        <div class="btn">3</div>
+        <div class="btn">4</div>
+      </div>
+    </div>
+    <div class="controls">
+      <div id="start-btn" class="start-btn btn">Start</div>
+      <div id="next-btn" class="next-btn btn hide_me">Next</div>
+      <a href="{% url 'dykt_home' %}" class='hide_me' id="quiz-done">Done</a>
+    </div>
+  </div>
+  <div class="score">
+    <p id="score-number"></p>
+  </div>
+</div>
+
+<!-- moving python into js -->
+<script>
+  dirtyList = `{{form.questions}}`
+  questionListBroken = dirtyList.replace(/&....;/g,'')  //answers
+  dirtyQuestionOptions = `{{form.q_options}}`
+  qOptions = dirtyQuestionOptions.replace(/&....;/g,'') // wrong choices
+  let q0 = `{{form.q1.value}}`
+  let q1 = `{{form.q2.value}}`
+  let q2 = `{{form.q3.value}}`
+  let q3 = `{{form.q4.value}}`
+  let q4 = `{{form.q5.value}}`
+  let q5 = `{{form.q6.value}}`
+  let q6 = `{{form.q7.value}}`
+  let q7 = `{{form.q8.value}}`
+  let q8 = `{{form.q9.value}}`
+  let q9 = `{{form.q10.value}}`
+</script>
+
+{% endblock content %}
