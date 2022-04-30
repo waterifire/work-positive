@@ -13,11 +13,11 @@
 <div class="tools_zone">
   <div class="container">
     <div class="tools_area">
-      <a href="{% url 'compliment_home' %}?q=''">All</a>
+      <a href="{% url 'compliment_home' %}">All</a>
       <form action="" method="get"> <!-- //TODO: fix the url that is showing -->
         {% csrf_token %}
         <input type="text" name="q" placeholder="Search...">
-        <!-- <input type="submit" name="search_btn" value="Search"> -->
+        <input type="submit" name="search_btn" value="Search">
       </form>
     </div>
   </div>
