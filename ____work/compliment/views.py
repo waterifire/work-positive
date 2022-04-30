@@ -41,5 +41,5 @@ def compliment_user(request, pk):
             # return redirect('compliment_home')
             return redirect(request.path_info)
     else:
-        context = {'user': user, 'form': form, 'compliments': compliments, 'q': q,}
+        context = {'user': user, 'form': form, 'compliments': compliments}
         return render(request, 'compliment/compliment_user.html', context)
