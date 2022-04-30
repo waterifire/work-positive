@@ -1,0 +1,26 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'ts/ts_quiz.css' %}">
+<title>Quiz Setup</title>
+{% endblock title %}
+
+{% block content %}
+<h1>QUIZ</h1>
+
+<div class="container">
+  <h5>ONE WORD ANSWERS PLEASE</h5>
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    {% for q in form %}
+      {{q.help_text}}
+      {{q}}
+      <br>
+    {% endfor %}
+  <input type="submit" name='quiz' value='Done'>
+  </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'ts/ts_home.css' %}">
+<title>Test Setups</title>
+{% endblock title %}
+
+{% block content %}
+<h1>TS</h1>
+
+<!-- //TODO: When you do a test (quiz, personality, workdle) you can't see it again -->
+
+<a href="{% url 'ts_quiz' %}">Quiz Setup</a>
+{% endblock content %}
