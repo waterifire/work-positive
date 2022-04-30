@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'base',
     'compliment',
     'hobby',
+    'test_setup',
 ]
 
 MIDDLEWARE = [
