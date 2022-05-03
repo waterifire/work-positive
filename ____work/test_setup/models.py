@@ -42,3 +42,24 @@ class QuizSetup(models.Model):
 
     def __str__(self):
         return f"{self.quiz_about}"
+
+
+
+class WordleSetup(models.Model):
+    questions = [
+        'where do you want to live',
+        'What is your biggest fear',
+        'What is one thing you would change about yourself',
+        'favourite music genre',
+        'One thing you really really really want to buy'
+    ]
+
+    quiz_about = models.ForeignKey(User, on_delete=models.CASCADE)
+    q1 = models.CharField(help_text=questions[0], max_length=10, blank=True, null=True)
+    q2 = models.CharField(help_text=questions[1], max_length=10, blank=True, null=True)
+    q3 = models.CharField(help_text=questions[2], max_length=10, blank=True, null=True)
+    q4 = models.CharField(help_text=questions[3], max_length=10, blank=True, null=True)
+    q5 = models.CharField(help_text=questions[4], max_length=10, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.quiz_about}"
