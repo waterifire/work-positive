@@ -1,7 +1,7 @@
 from django.urls import path
 
 
-from .views import ts_home, ts_quiz, ts_workdle
+from .views import ts_home, ts_quiz, ts_workdle, ts_ttma
 
 # urlpatterns below
 
@@ -9,4 +9,5 @@ urlpatterns = [
     path('home/', ts_home, name='ts_home'),
     path('setup_quiz/', ts_quiz, name='ts_quiz'),
     path('setup_workdle/', ts_workdle, name='ts_workdle'),
+    path('setup_ttma/', ts_ttma, name='ts_ttma'),
 ]

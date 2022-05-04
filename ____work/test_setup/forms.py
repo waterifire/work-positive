@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import QuizSetup, WordleSetup
+from .models import QuizSetup, WordleSetup, TtmaSetup
 
 # forms below
 
@@ -75,3 +75,11 @@ class WorkdleSetupForm(forms.ModelForm):
     class Meta:
         model = WordleSetup
         fields = ['q1', 'q2', 'q3', 'q4', 'q5']
+
+
+class TtmaSetupForm(forms.ModelForm):
+    question = "Easy things I enjoy talking about"
+
+    class Meta:
+        model = TtmaSetup
+        fields = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']

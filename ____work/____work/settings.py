@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'dykt',
     'workdle',
     'salvation',
+    'ttma',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+
+.people_area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.person_place {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 20%;
+}
+
+.left_side {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.right_side {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide_me {
+  display: none;
+}
+
+.fat_me_up {
+  flex-basis: 100%;
+  width: 100%;
+}

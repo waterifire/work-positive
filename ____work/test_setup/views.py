@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
-from .models import QuizSetup, WordleSetup
-from .forms import QuizSetupForm, WorkdleSetupForm
+from .models import QuizSetup, WordleSetup, TtmaSetup
+from .forms import QuizSetupForm, WorkdleSetupForm, TtmaSetupForm
 # Create your views here.
 
 def ts_home(request):
@@ -41,4 +41,19 @@ def ts_workdle(request):
 
     context = {'form': form}
     response = render(request, 'ts/ts_workdle.html', context)
+    return response
+
+def ts_ttma(request):
+    form = TtmaSetupForm()
+
+    if request.method == "POST":
+        form = TtmaSetupForm(request.POST)
+        if form.is_valid():
+            more_details = form.save(commit=False)
+            more_details.quiz_about = request.user
+            more_details.save()
+            return redirect('ts_home')
+
+    context = {'form': form}
+    response = render(request, 'ts/ts_ttma.html', context)
     return response

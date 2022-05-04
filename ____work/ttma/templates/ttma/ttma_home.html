@@ -1,0 +1,40 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'ttma/ttma_home.css' %}">
+<script src="{% static 'ttma/ttma_home.js' %}" defer charset="utf-8"></script>
+<title>Talk To Me About Home</title>
+{% endblock title %}
+
+{% block content %}
+<h1>TTMA</h1>
+
+<div class="people_zone">
+  <div class="container">
+    <div class="people_area">
+      {% for person in people %}
+      <!-- https://stackoverflow.com/questions/11475232/find-the-element-before-and-after-a-specific-element-with-pure-javascript -->
+      <!-- to select and unhide previous and next elements in center -->
+      <div class="person_place">
+        <div class="left_side hide_me">
+          <p class='p1'>{{person.q1}}</p>
+          <p class='p2'>{{person.q2}}</p>
+          <p class='p3'>{{person.q3}}</p>
+        </div>
+        <div id="person_{{person.id}}" class="center">
+          {{person}}
+        </div>
+        <div class="right_side hide_me">
+          <p class='p4'>{{person.q4}}</p>
+          <p class='p5'>{{person.q5}}</p>
+          <p class='p6'>{{person.q6}}</p>
+        </div>
+        <br>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

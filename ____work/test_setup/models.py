@@ -61,5 +61,26 @@ class WordleSetup(models.Model):
     q4 = models.CharField(help_text=questions[3], max_length=10, blank=True, null=True)
     q5 = models.CharField(help_text=questions[4], max_length=10, blank=True, null=True)
 
+    created_on = models.DateTimeField(default=timezone.now())
+    updated_on = models.DateTimeField(auto_now=True)
+
     def __str__(self):
         return f"{self.quiz_about}"
+
+
+class TtmaSetup(models.Model):
+    question = "I enjoy talking about: "
+
+    quiz_about = models.ForeignKey(User, on_delete=models.CASCADE)
+    q1 = models.CharField(help_text=f"1) {question}", max_length=10, blank=True, null=True)
+    q2 = models.CharField(help_text=f"2) {question}", max_length=10, blank=True, null=True)
+    q3 = models.CharField(help_text=f"3) {question}", max_length=10, blank=True, null=True)
+    q4 = models.CharField(help_text=f"4) {question}", max_length=10, blank=True, null=True)
+    q5 = models.CharField(help_text=f"5) {question}", max_length=10, blank=True, null=True)
+    q6 = models.CharField(help_text=f"6) {question}", max_length=10, blank=True, null=True)
+
+    created_on = models.DateTimeField(default=timezone.now())
+    updated_on = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.quiz_about}'
