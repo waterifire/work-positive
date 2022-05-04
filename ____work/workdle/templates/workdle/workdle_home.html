@@ -1,0 +1,20 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'workdle/workdle_home.css' %}">
+<title>Workdle Home</title>
+{% endblock title %}
+
+{% block content %}
+
+<h1>Workdle</h1>
+
+{% for person in people %}
+<a href="{% url 'workdle_arena' person.id %}">
+  {{person}}
+</a>
+<br>
+{% endfor %}
+
+{% endblock content %}
