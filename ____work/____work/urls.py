@@ -24,4 +24,5 @@ urlpatterns = [
     path('test_setup/', include('test_setup.urls')),
     path('dykt/', include('dykt.urls')),
     path('workdle/', include('workdle.urls')),
+    path('salvation/', include('salvation.urls')),
 ]
