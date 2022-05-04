@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'hobby',
     'test_setup',
     'dykt',
+    'workdle',
 ]
 
 MIDDLEWARE = [
