@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'test_setup',
     'dykt',
     'workdle',
+    'salvation',
 ]
 
 MIDDLEWARE = [
