@@ -14,13 +14,33 @@
   <h5>More than 5 letters will make it difficult lol</h5>
   <form action="" method="POST">
     {% csrf_token %}
-
-    {% for q in form %}
-      {{q.help_text}}
-      {{q}}
-      <br>
-    {% endfor %}
-  <input type="submit" name='quiz' value='Done'>
+    <div id="workdle_form">
+      <div class="questions">
+        <div class="question_title">
+          <h2>Question</h2>
+        </div>
+        <div class="question_zone">
+          {{form.qq1}}
+          {{form.qq2}}
+          {{form.qq3}}
+          {{form.qq4}}
+          {{form.qq5}}
+        </div>
+      </div>
+      <div class="answers">
+        <div class="answer_title">
+          <h2>Answers</h2>
+        </div>
+        <div class="answer_zone">
+          {{form.q1}}
+          {{form.q2}}
+          {{form.q3}}
+          {{form.q4}}
+          {{form.q5}}
+        </div>
+      </div>
+    </div>
+  <input type="submit" class='submit' name='quiz' value='Done'>
   </form>
 </div>
 

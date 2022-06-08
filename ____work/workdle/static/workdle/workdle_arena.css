@@ -2,7 +2,10 @@ h1 {
   text-align: center;
 }
 
-
+h2 {
+  color: #fff;
+  text-align: center;
+}
 
 .body_zone {
   background-color: hsl(240, 3%, 7%);

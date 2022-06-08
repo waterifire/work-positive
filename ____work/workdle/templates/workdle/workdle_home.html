@@ -10,11 +10,13 @@
 
 <h1>Workdle</h1>
 
-{% for person in people %}
-<a href="{% url 'workdle_arena' person.id %}">
-  {{person}}
-</a>
-<br>
-{% endfor %}
+<div class="container">
+  {% for person in people %}
+  <a href="{% url 'workdle_arena' person.id %}">
+    {{person}}
+  </a>
+  <br>
+  {% endfor %}
+</div>
 
 {% endblock content %}

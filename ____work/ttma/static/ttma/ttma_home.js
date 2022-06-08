@@ -16,4 +16,14 @@ function show_them() {
   prev.classList.remove('hide_me')
   next.classList.remove('hide_me')
   active.classList.add('fat_me_up')
+  active.removeEventListener('click', show_them)
+  active.addEventListener('click', hide_them)
+}
+
+function hide_them() {
+  prev.classList.add('hide_me')
+  next.classList.add('hide_me')
+  active.classList.remove('fat_me_up')
+  active.removeEventListener('click', hide_them)
+  active.addEventListener('click', show_them)
 }

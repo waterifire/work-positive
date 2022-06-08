@@ -1,3 +1,31 @@
 h1 {
   text-align: center;
 }
+
+#form_zone {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 30rem;
+}
+
+.form_area {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.entry {
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+}

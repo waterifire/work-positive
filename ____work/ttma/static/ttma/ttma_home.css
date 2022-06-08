@@ -1,3 +1,8 @@
+:root {
+  --bg-main: #FFE4C4;
+  --bg-alt: #F5F5DC;
+}
+
 h1 {
   text-align: center;
 }
@@ -11,32 +16,51 @@ h1 {
 .person_place {
   display: flex;
   flex-direction: row;
-  flex-basis: 20%;
+  flex-basis: 50%;
+  height: 10rem;
+  margin-bottom: 0.2rem;
+}
+
+.person_place > * {
+  flex-basis: 33%;
 }
 
 .left_side {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .right_side {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg-main);
 }
 
-.hide_me {
-  display: none;
-}
-
-.fat_me_up {
-  flex-basis: 100%;
+.color-main {
+  background-color: var(--bg-main);
   width: 100%;
+}
+
+.color-alt {
+  background-color: var(--bg-alt);
+  width: 100%;
+}
+
+.topic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 33.3333%;
 }

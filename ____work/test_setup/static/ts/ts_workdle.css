@@ -1,3 +1,48 @@
 h1 {
   text-align: center;
 }
+
+#workdle_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.questions,
+.answers {
+  flex-basis: 50%;
+  height: 20rem;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+}
+.question_title {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question_zone {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-around;
+  flex-basis: 90%;
+}
+.answer_title {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.answer_zone {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-around;
+  flex-basis: 90%;
+}
+
+.submit {
+  width: 100%;
+}

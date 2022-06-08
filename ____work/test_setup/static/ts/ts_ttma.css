@@ -1,0 +1,23 @@
+h1,
+h2,
+h5 {
+  text-align: center;
+}
+
+form {
+  background-color: lightblue;
+  margin: 2rem 0;
+}
+
+.form_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-basis: 100%;
+  min-height: 18rem;
+  padding: 0 2rem;
+}
+
+.btn {
+  width: 100%;
+}

@@ -14,12 +14,19 @@
   <form action="" method="POST">
     {% csrf_token %}
 
-    {% for q in form %}
-      {{q.help_text}}
-      {{q}}
-      <br>
-    {% endfor %}
-  <input type="submit" name='quiz' value='Done'>
+    <div id="form_zone">
+      {% for q in form %}
+        <div class="form_area">
+          <div class="heading">
+            {{q.help_text}}
+          </div>
+          <div class="entry">
+            {{q}}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  <input type="submit" class='btn' name='quiz' value='Done'>
   </form>
 </div>
 

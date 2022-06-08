@@ -13,22 +13,22 @@
 <div class="people_zone">
   <div class="container">
     <div class="people_area">
-      {% for person in people %}
       <!-- https://stackoverflow.com/questions/11475232/find-the-element-before-and-after-a-specific-element-with-pure-javascript -->
       <!-- to select and unhide previous and next elements in center -->
+      {% for person in people %}
       <div class="person_place">
-        <div class="left_side hide_me">
-          <p class='p1'>{{person.q1}}</p>
-          <p class='p2'>{{person.q2}}</p>
-          <p class='p3'>{{person.q3}}</p>
+        <div class="left_side">
+          <p class='topic p1 color-alt'>{{person.q1}}</p>
+          <p class='topic p2 color-main'>{{person.q2}}</p>
+          <p class='topic p3 color-alt'>{{person.q3}}</p>
         </div>
         <div id="person_{{person.id}}" class="center">
           {{person}}
         </div>
-        <div class="right_side hide_me">
-          <p class='p4'>{{person.q4}}</p>
-          <p class='p5'>{{person.q5}}</p>
-          <p class='p6'>{{person.q6}}</p>
+        <div class="right_side">
+          <p class='topic p4 color-alt'>{{person.q4}}</p>
+          <p class='topic p5 color-main'>{{person.q5}}</p>
+          <p class='topic p6 color-alt'>{{person.q6}}</p>
         </div>
         <br>
       </div>

@@ -9,11 +9,14 @@
 {% block content %}
 <h1>Do you know them?</h1>
 
-{% for person in people %}
-<a href="{% url 'dykt_arena' person.id %}">
-  {{person}}
-</a>
-<br>
-{% endfor %}
+<div class="container">
+
+  {% for person in people %}
+  <a href="{% url 'dykt_arena' person.id %}">
+    {{person}}
+  </a>
+  <br>
+  {% endfor %}
+</div>
 
 {% endblock content %}

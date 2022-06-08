@@ -7,19 +7,21 @@
 {% endblock title %}
 
 {% block content %}
-<h1>Talk to me About</h1>
 
 <div class="container">
-  <h5>ONE WORD ANSWERS PLEASE</h5>
-  <h2>{{form.question}}</h2>
   <form action="" method="POST">
     {% csrf_token %}
-    {% for q in form %}
-      {{q.help_text}}
-      {{q}}
-      <br>
-    {% endfor %}
-  <input type="submit" name='quiz' value='Done'>
+    <h1>Talk to me About</h1>
+    <h2>{{form.question}}</h2>
+    <h5>ONE WORD ANSWERS PLEASE</h5>
+    <div id="form_zone">
+      <div class="form_area">
+        {% for q in form %}
+        {{q}}
+        {% endfor %}
+      </div>
+    </div>
+  <input type="submit" class='btn' name='quiz' value='Done'>
   </form>
 </div>
 

@@ -4,12 +4,6 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 # Create your models here.
-"""
-3 test setups:
-1) quiz
-2) workdle
-3) bio
-"""
 
 class QuizSetup(models.Model):
     questions = [
@@ -55,6 +49,11 @@ class WordleSetup(models.Model):
     ]
 
     quiz_about = models.ForeignKey(User, on_delete=models.CASCADE)
+    qq1 = models.CharField(max_length=50, blank=True, null=True)
+    qq2 = models.CharField(max_length=50, blank=True, null=True)
+    qq3 = models.CharField(max_length=50, blank=True, null=True)
+    qq4 = models.CharField(max_length=50, blank=True, null=True)
+    qq5 = models.CharField(max_length=50, blank=True, null=True)
     q1 = models.CharField(help_text=questions[0], max_length=10, blank=True, null=True)
     q2 = models.CharField(help_text=questions[1], max_length=10, blank=True, null=True)
     q3 = models.CharField(help_text=questions[2], max_length=10, blank=True, null=True)

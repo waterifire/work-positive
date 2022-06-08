@@ -18,7 +18,7 @@ def workdle_arena(request, pk):
 
     number_options = [0, 1, 2, 3, 4]
     number_choice = random.choice(number_options)
-    question_options = [person.questions[0], person.questions[1], person.questions[2], person.questions[3], person.questions[4]]
+    question_options = [person.qq1, person.qq2, person.qq3, person.qq4, person.qq5]
     word_options = [person.q1, person.q2, person.q3, person.q4, person.q5]
 
     word_specific = word_options[number_choice].lower()

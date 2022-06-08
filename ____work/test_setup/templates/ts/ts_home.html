@@ -10,10 +10,11 @@
 <h1>TS</h1>
 
 <!-- //TODO: When you do a test (quiz, personality, workdle) you can't see it again -->
-
-<a href="{% url 'ts_quiz' %}">Quiz Setup</a>
-<br>
-<a href="{% url 'ts_workdle' %}">Workdle Setup</a>
-<br>
-<a href="{% url 'ts_ttma' %}">Talk To Me About</a>
+<div class="container">
+  <a href="{% url 'ts_quiz' %}">Quiz Setup</a>
+  <br>
+  <a href="{% url 'ts_workdle' %}">Workdle Setup</a>
+  <br>
+  <a href="{% url 'ts_ttma' %}">Talk To Me About</a>
+</div>
 {% endblock content %}
