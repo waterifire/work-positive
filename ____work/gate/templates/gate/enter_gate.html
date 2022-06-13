@@ -1,0 +1,22 @@
+{% extends 'basic1.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'gate/enter_gate.css' %}">
+<title>Login</title>
+{% endblock title %}
+
+{% block content %}
+
+<h1>Login</h1>
+
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{bioF.as_p}}
+        <input type="submit" name="enter_gate" value="Done">
+    </form>
+</div>
+
+{% endblock content %}
+
